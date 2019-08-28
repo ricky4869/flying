@@ -73,7 +73,7 @@ function cart() {
 }
 
 
-if (lists) {
+if (lists.length>=1) {
     cart();
 }
 
