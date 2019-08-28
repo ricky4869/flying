@@ -73,7 +73,7 @@ function cart() {
 }
 
 
-if (lists.length>=1) {
+if (lists.length >= 1) {
     cart();
 }
 
@@ -146,4 +146,5 @@ $(document).ready(function () {
 
         }
     })
+
 })

@@ -1,4 +1,4 @@
-var navZh = document.querySelector('.navbar-zh')
+var navZh = document.querySelector('.navbar-zh');
 
 var nav = `<li class="navbar-item"><a href="index.html"> 台南好遊<div class="navbar_link"></div></a>
 </li>
@@ -26,10 +26,22 @@ var nav = `<li class="navbar-item"><a href="index.html"> 台南好遊<div class=
 <li class="navbar-item"><a href="cart.html"> 購物車<div class="navbar_link"></div></a>
     
 </li>
-<li class="navbar-item login" data-toggle="modal" data-target=".login_bar"><a href="#"> 登入/註冊<div class="navbar_link"></div></a>
-</li>`
+<li class="navbar-item navbar-slide login" data-toggle="modal" data-target=".login_bar"><a href="#"> 登入/註冊<div class="navbar_link"></div></a>
+</li>`;
 
 navZh.innerHTML = nav;
+
+let navSlides = document.querySelectorAll('.navbar-slide');
+
+function noLink(e) {
+    e.preventDefault();
+}
+
+navSlides.forEach((navSlide) => {
+    navSlide.addEventListener("click", noLink);
+});
+
+
 
 function getFooter() {
     let footer = document.querySelector('.footer');
