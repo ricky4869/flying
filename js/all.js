@@ -35,6 +35,10 @@ function iEmail(strEmail) {
 
 var lists = document.querySelectorAll('.cart-list')
 
+if (lists.length >= 1) {
+    cart();
+}
+
 function cart() {
     var add = document.querySelectorAll('.add');
     var reduce = document.querySelectorAll('.reduce');
@@ -73,9 +77,6 @@ function cart() {
 }
 
 
-if (lists.length >= 1) {
-    cart();
-}
 
 
 
@@ -84,10 +85,8 @@ if (lists.length >= 1) {
 $(document).ready(function () {
 
 
-
-
     $('.wrap').on('click', function () {
-        $('.navbar-down').collapse('hide');
+        $('.navbar-down').on('hide');
     })
 
 

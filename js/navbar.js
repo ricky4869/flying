@@ -35,6 +35,7 @@ let navSlides = document.querySelectorAll('.navbar-slide');
 
 function noLink(e) {
     e.preventDefault();
+    // e.target();
 }
 
 navSlides.forEach((navSlide) => {
