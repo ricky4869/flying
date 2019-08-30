@@ -85,9 +85,9 @@ function cart() {
 $(document).ready(function () {
 
 
-    $('.wrap').on('click', function () {
-        $('.navbar-down').on('hide');
-    })
+    // $('*:not(.navbar-slide a)').on('click', function () {
+    //     $('.navbar-down').collapse('hide');
+    // })
 
 
 

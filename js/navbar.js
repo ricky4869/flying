@@ -2,21 +2,21 @@ var navZh = document.querySelector('.navbar-zh');
 
 var nav = `<li class="navbar-item"><a href="index.html"> 台南好遊<div class="navbar_link"></div></a>
 </li>
-<li class="navbar-item navbar-slide" data-toggle="collapse" data-target="#navDown1"><a href="#"> 台南好食 <div class="navbar_link"></div></a>
+<li class="navbar-item navbar-slide"><a href="#" data-toggle="collapse" data-target="#navDown1"> 台南好食 <div class="navbar_link"></div></a>
     <ul class="navbar-down collapse" id="navDown1" data-parent="#navbarMain">
         <li><a href="#">台南好食</a></li>
         <li><a href="#">台南好食</a></li>
         <li><a href="#">台南好食</a></li>
     </ul>
 </li>
-<li class="navbar-item navbar-slide" data-toggle="collapse" data-target="#navDown2"><a href="#"> 台南好宿<div class="navbar_link"></div></a>
+<li class="navbar-item navbar-slide"><a href="#" data-toggle="collapse" data-target="#navDown2"> 台南好宿<div class="navbar_link"></div></a>
     <ul class="navbar-down collapse" id="navDown2" data-parent="#navbarMain">
         <li><a href="#">台南好宿</a></li>
         <li><a href="#">台南好宿</a></li>
         <li><a href="#">台南好宿</a></li>
     </ul>
 </li>
-<li class="navbar-item navbar-slide" data-toggle="collapse" data-target="#navDown3"><a href="#"> 遊程客製<div class="navbar_link"></div></a>
+<li class="navbar-item navbar-slide"><a href="#" data-toggle="collapse" data-target="#navDown3"> 遊程客製<div class="navbar_link"></div></a>
     <ul class="navbar-down collapse" id="navDown3" data-parent="#navbarMain">
         <li><a href="#">遊程客製</a></li>
         <li><a href="#">遊程客製</a></li>
@@ -31,11 +31,11 @@ var nav = `<li class="navbar-item"><a href="index.html"> 台南好遊<div class=
 
 navZh.innerHTML = nav;
 
-let navSlides = document.querySelectorAll('.navbar-slide');
+let navSlides = document.querySelectorAll('.navbar-slide a');
 
 function noLink(e) {
     e.preventDefault();
-    // e.target();
+    console.log(e.target)
 }
 
 navSlides.forEach((navSlide) => {
