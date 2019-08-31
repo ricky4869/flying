@@ -81,15 +81,13 @@ function cart() {
 
 
 
-
 $(document).ready(function () {
 
-
-    // $('*:not(.navbar-slide a)').on('click', function () {
-    //     $('.navbar-down').collapse('hide');
-    // })
-
-
+$('.wrap').on('click', function (e) {
+            if (e.target.className != 'navbar-slide' && e.target.className != 'navbar-slide collapsed'){
+                $('.navbar-down').collapse('hide');
+            }
+        })
 
     $('.m_btn > .icon').click(function () {
         $('.wrap-shadows').toggle();
