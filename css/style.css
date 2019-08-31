@@ -1274,6 +1274,7 @@ body{
 
 /* --------------------------- */
 .subpage{
+    margin-top: 20px;
     align-items: center;
     -webkit-align-items: center;
 }

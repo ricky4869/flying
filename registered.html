@@ -92,7 +92,7 @@
                                     姓名<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="text" class="mem_name">
+                                    <input type="text" class="mem_name mem_must">
                                 </div>
                             </li>
                             <li>
@@ -100,8 +100,8 @@
                                     E-mail<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="text" class="mem_email" onblur=iEmail(this.value)><span
-                                        class="alertemail imp_red d-block" style="font-size:.8em;"></span>
+                                    <input type="text" class="mem_email mem_must"><span
+                                        class="alertEmail imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
                             <li>
@@ -109,7 +109,7 @@
                                     密碼<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="password" class="mem_password" onblur='checkPassword()'>
+                                    <input type="password" class="mem_password mem_must">
                                 </div>
                             </li>
                             <li>
@@ -117,7 +117,7 @@
                                     確認密碼<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="password" class="mem_checkPassword" onblur='checkPassword()'><span
+                                    <input type="password" class="mem_checkPassword mem_must"><span
                                         class="alertPassword imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
@@ -156,7 +156,7 @@
                                     手機<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="text" class="mem_phone"
+                                    <input type="text" class="mem_phone mem_must"
                                         onkeyup="this.value=this.value.replace(/\D/g,'')">
                                 </div>
                             </li>

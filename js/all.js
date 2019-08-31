@@ -1,7 +1,3 @@
-
-
-
-
 var bodyh = document.body;
 function windowsHeight() {
     bodyh.style.height = window.innerHeight + "px";
@@ -9,31 +5,45 @@ function windowsHeight() {
 windowsHeight();
 window.addEventListener('resize', windowsHeight);
 
-
+var memPassword = document.querySelector('.mem_password');
+var memCheckPassword = document.querySelector('.mem_checkPassword');
 function checkPassword() {
-    var password = document.querySelector('.mem_password');
-    var checkPasswords = document.querySelector('.mem_checkPassword');
     var alertPassword = document.querySelector('.alertPassword');
-    if (password.value !== checkPasswords.value) {
+    if (memPassword.value !== memCheckPassword.value) {
         alertPassword.innerHTML = '與密碼不一致';
     } else {
         alertPassword.innerHTML = '';
     }
 };
+if(memPassword !== null){
+    memPassword.addEventListener('blur', checkPassword);
+};
+if(memCheckPassword !== null){
+    memCheckPassword.addEventListener('blur', checkPassword);
+};
 
-function iEmail(strEmail) {
-    let alertEmail = document.querySelector('.alertemail');
-    if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) {
+
+
+var memEmail = document.querySelector('.mem_email');
+function iEmail() {
+    let alertEmail = document.querySelector('.alertEmail');
+    if (memEmail.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) {
         alertEmail.innerHTML = '';
     } else {
         alertEmail.innerHTML = 'E-mail格式不符';
-    }
-}
+    };
+};
+
+if(memEmail !== null){
+    memEmail.addEventListener('blur', iEmail);
+};
 
 
 
 
-var lists = document.querySelectorAll('.cart-list')
+
+
+var lists = document.querySelectorAll('.cart-list');
 
 if (lists.length >= 1) {
     cart();
