@@ -14,11 +14,11 @@ $('.wrap').on('click', function (e) {
         })
 
     $('.m_btn > .icon').click(function () {
-        $('.wrap-shadows').toggle();
+        $('.wrap-shadows').collapse('toggle');
     })
 
     $('.wrap-shadows').click(function () {
-        $('.wrap-shadows').hide();
+        $('.wrap-shadows').collapse('hide');
         $('.navbar').collapse('hide');
     })
 
