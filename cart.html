@@ -352,6 +352,49 @@
             pages[subpageIndex - 1].className += " active";
         };
 
+        var lists = document.querySelectorAll('.cart-list');
+
+        if (lists.length >= 1) {
+            cart();
+        }
+
+        function cart() {
+            var add = document.querySelectorAll('.add');
+            var reduce = document.querySelectorAll('.reduce');
+            var val = document.querySelectorAll('.quantity input');
+            var price = document.querySelectorAll('.price .value');
+            var subt = document.querySelectorAll('.subtotal .value');
+            var total = document.querySelector('.total .value');
+
+
+            for (let i = 0; i < lists.length; i++) {
+                subt[i].textContent = price[i].textContent * val[i].value;
+                total.textContent = total.textContent * 1 + subt[i].textContent * 1;
+                add[i].addEventListener('click', quantityAdd);
+                function quantityAdd() {
+                    val[i].value = val[i].value * 1 + 1;
+                    // return val[i].value;
+                    subt[i].textContent = price[i].textContent * val[i].value;
+                    total.textContent = total.textContent * 1 + price[i].textContent * 1;
+                }
+                reduce[i].addEventListener('click', quantityReduce);
+
+                function quantityReduce() {
+                    if (val[i].value != 0) {
+                        val[i].value = val[i].value * 1 - 1;
+                        total.textContent = total.textContent * 1 - price[i].textContent * 1;
+                    } else {
+                        val[i].value == 0;
+                        total.textContent == 0;
+                    }
+                    subt[i].textContent = price[i].textContent * val[i].value;
+
+
+
+                };
+            };
+        }
+
     </script>
 </body>
 

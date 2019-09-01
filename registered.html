@@ -169,7 +169,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="btn">
+                                <div class="btn mem_btn">
                                     <a href="#">註冊會員</a>
                                 </div>
                             </li>
@@ -196,6 +196,64 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <script>
+        var memPassword = document.querySelector('.mem_password');
+        var memCheckPassword = document.querySelector('.mem_checkPassword');
+        function checkPassword() {
+            var alertPassword = document.querySelector('.alertPassword');
+            if (memPassword.value == memCheckPassword.value) {
+                alertPassword.innerHTML = '';
+                memPassword.classList.remove('inputRed');
+                memCheckPassword.classList.remove('inputRed');
+            } else {
+                alertPassword.innerHTML = '與密碼不一致';
+                memPassword.classList.add('inputRed');
+                memCheckPassword.classList.add('inputRed');
+            }
+        };
+        memPassword.addEventListener('blur', checkPassword);
+        memCheckPassword.addEventListener('blur', checkPassword);
+
+        var memEmail = document.querySelector('.mem_email');
+        function iEmail() {
+            let alertEmail = document.querySelector('.alertEmail');
+            if (memEmail.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) {
+                alertEmail.innerHTML = '';
+                memEmail.classList.remove('inputRed');
+            } else {
+                alertEmail.innerHTML = 'E-mail格式不符';
+                memEmail.classList.add('inputRed');
+            };
+        };
+        memEmail.addEventListener('blur', iEmail);
+
+
+        var memMusts = document.querySelectorAll('.mem_must');
+        var memBtn = document.querySelector('.mem_btn a');
+
+        for (let i = 0; i < memMusts.length; i++) {
+            function inputBorderRed() {
+                if (memMusts[i].value !== "") {
+                    memMusts[i].classList.remove('inputNone');
+                } else {
+                    memMusts[i].classList.add('inputNone');
+                }
+            }
+            memMusts[i].addEventListener('blur', inputBorderRed);
+        }
+
+        memBtn.addEventListener('click', function (e) {
+            if (memEmail.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1 && memPassword.value == memCheckPassword.value && memMusts[0].value !== '' && memMusts[1].value !== '' && memMusts[2].value !== '' && memMust[3].value !== '' && memMusts[4].value !== '') {
+               
+            } else {
+                 e.preventDefault();
+            }
+
+        })
+
+
+
+    </script>
 </body>
 
 </html>

@@ -1121,7 +1121,12 @@ body{
         width: 50%;
     }
 }
-
+.inputRed{
+    border: 1px solid #f00!important;
+}
+.inputNone{
+    border: 1px solid #f00!important;
+}
 .imp_red{
     color: #f00;
 }
