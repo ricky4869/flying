@@ -92,7 +92,7 @@
                                     姓名<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="text" class="mem_name mem_must">
+                                    <input type="text" class="mem_name mem_must" minlength="1">
                                 </div>
                             </li>
                             <li>
@@ -100,7 +100,7 @@
                                     E-mail<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="text" class="mem_email mem_must"><span
+                                    <input type="text" class="mem_email mem_must" minlength="1"><span
                                         class="alertEmail imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
@@ -109,7 +109,7 @@
                                     密碼<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="password" class="mem_password mem_must">
+                                    <input type="password" class="mem_password mem_must" minlength="8" maxlength="16" placeholder="請輸入8~16位英數密碼">
                                 </div>
                             </li>
                             <li>
@@ -117,7 +117,7 @@
                                     確認密碼<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="password" class="mem_checkPassword mem_must"><span
+                                    <input type="password" class="mem_checkPassword mem_must" minlength="8" maxlength="16" placeholder="再輸入一次密碼"><span
                                         class="alertPassword imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
@@ -147,8 +147,8 @@
                                 </div>
                                 <div class="mem_input">
                                     <input type="text" class="mem_area"
-                                        onkeyup="this.value=this.value.replace(/\D/g,'')">-<input type="text"
-                                        class="mem_call" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                                        >-<input type="text"
+                                        class="mem_call">
                                 </div>
                             </li>
                             <li>
@@ -156,8 +156,8 @@
                                     手機<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="text" class="mem_phone mem_must"
-                                        onkeyup="this.value=this.value.replace(/\D/g,'')">
+                                    <input type="text" class="mem_phone mem_must" minlength="9">
+                                    <span  class="alertPhone imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
                             <li>
@@ -197,10 +197,10 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script>
-        var memPassword = document.querySelector('.mem_password');
-        var memCheckPassword = document.querySelector('.mem_checkPassword');
+        let memPassword = document.querySelector('.mem_password');
+        let memCheckPassword = document.querySelector('.mem_checkPassword');
         function checkPassword() {
-            var alertPassword = document.querySelector('.alertPassword');
+            let alertPassword = document.querySelector('.alertPassword');
             if (memPassword.value == memCheckPassword.value) {
                 alertPassword.innerHTML = '';
                 memPassword.classList.remove('inputRed');
@@ -211,10 +211,11 @@
                 memCheckPassword.classList.add('inputRed');
             }
         };
-        memPassword.addEventListener('blur', checkPassword);
-        memCheckPassword.addEventListener('blur', checkPassword);
+        memPassword.addEventListener('keyup', checkPassword);
+        memCheckPassword.addEventListener('keyup', checkPassword);
 
-        var memEmail = document.querySelector('.mem_email');
+
+        let memEmail = document.querySelector('.mem_email');
         function iEmail() {
             let alertEmail = document.querySelector('.alertEmail');
             if (memEmail.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) {
@@ -225,11 +226,24 @@
                 memEmail.classList.add('inputRed');
             };
         };
-        memEmail.addEventListener('blur', iEmail);
+        memEmail.addEventListener('keyup', iEmail);
+
+        let memPhone = document.querySelector('.mem_phone');
+        function checkPhone(){
+            let alertPhone = document.querySelector('.alertPhone');
+            if(memPhone.value[0] == 0 && memPhone.value[1] == 9 && memPhone.value.length >= 9){
+                alertPhone.textContent = '';
+                memPhone.classList.remove('inputRed');
+            } else {
+                alertPhone.textContent = '手機格式不符';
+                memPhone.classList.add('inputRed');
+            }
+        }
+        memPhone.addEventListener('keyup', checkPhone);
 
 
-        var memMusts = document.querySelectorAll('.mem_must');
-        var memBtn = document.querySelector('.mem_btn a');
+        let memMusts = document.querySelectorAll('.mem_must');
+        let memBtn = document.querySelector('.mem_btn a');
 
         for (let i = 0; i < memMusts.length; i++) {
             function inputBorderRed() {

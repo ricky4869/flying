@@ -1106,6 +1106,9 @@ body{
 .mem_address{
     width: 80%;
 }
+.mem_must:invalid{
+    border: 1px solid #f00!important;
+}
 
 @media (max-width: 992px) {
     .mem_address{
