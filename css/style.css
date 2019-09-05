@@ -47,7 +47,13 @@ body{
 }
 
 .header img{
-   width: 200px;
+   max-width: 200px;
+}
+
+@media (min-width:768px) {
+    .header img{
+        max-width: 280px;
+     }
 }
 
 /* --------------------------- */
@@ -165,6 +171,19 @@ body{
 .navbar > .Language a.active{
     background-color: rgba(0,0,0,0.65);
     color: #fff;
+}
+
+.navbar > .memberHello{
+    text-align: right;
+    padding-top: 16px;
+}
+
+.navbar > .memberHello > li{
+    margin: 0 12px;
+}
+
+.navbar > .memberHello > li > span{
+    color:#009797;
 }
 
 @media (max-width: 992px) {
@@ -741,6 +760,10 @@ body{
     color: #666;
 }
 
+/* .cart-list{
+    display: none;
+} */
+
 .cart .cart-list .row:first-child{
     border-bottom:1px solid  #ccc;
 }
@@ -1083,7 +1106,7 @@ body{
 .addMember .mem_input select{
     border: rgba(0,0,0,0.2) 1px solid;
     border-radius: 3px;
-    padding: 3px 0 3px 3px;
+    padding: 5px 0 5px 3px;
 }
 
 .addMember .mem_input > input:focus{
@@ -1110,8 +1133,11 @@ body{
     min-width: 20%;
     font-size: 12px;
 }
-.mem_must:invalid{
+/* .mem_must:invalid{
     border: 1px solid #f00!important;
+} */
+.mem_alert{
+    margin-top: 6px;
 }
 
 @media (max-width: 992px) {

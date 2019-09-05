@@ -68,6 +68,11 @@
                             <li><a href="#" data-toggle="list">日本語</a></li>
                             <li><a href="#" data-toggle="list">English</a></li>
                         </ul>
+                        <ul class="container memberHello col-lg-12">
+                            <li>
+                                <span>周杰倫</span>會員，你好
+                            </li>
+                        </ul>
                         <ul class="container navbar-zh" id="navbarMain">
 
                         </ul>
@@ -93,6 +98,7 @@
                                 </div>
                                 <div class="mem_input">
                                     <input type="text" class="mem_name mem_must" minlength="1">
+                                    <span class="mem_alert imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
                             <li>
@@ -100,8 +106,8 @@
                                     E-mail<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="text" class="mem_email mem_must" minlength="1"><span
-                                        class="alertEmail imp_red d-block" style="font-size:.8em;"></span>
+                                    <input type="text" class="mem_email mem_must" minlength="1">
+                                    <span class="mem_alert imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
                             <li>
@@ -109,7 +115,9 @@
                                     密碼<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="password" class="mem_password mem_must" minlength="8" maxlength="16" placeholder="請輸入8~16位英數密碼">
+                                    <input type="password" class="mem_password mem_must" minlength="8" maxlength="16"
+                                        placeholder="請輸入8~16位英數密碼">
+                                    <span class="mem_alert imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
                             <li>
@@ -117,8 +125,9 @@
                                     確認密碼<span class="imp_red">*</span>
                                 </div>
                                 <div class="mem_input">
-                                    <input type="password" class="mem_checkPassword mem_must" minlength="8" maxlength="16" placeholder="再輸入一次密碼"><span
-                                        class="alertPassword imp_red d-block" style="font-size:.8em;"></span>
+                                    <input type="password" class="mem_checkPassword mem_must" minlength="8"
+                                        maxlength="16" placeholder="再輸入一次密碼">
+                                    <span class="mem_alert imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
                             <li>
@@ -146,9 +155,7 @@
                                     聯絡電話
                                 </div>
                                 <div class="mem_input">
-                                    <input type="text" class="mem_area"
-                                        >-<input type="text"
-                                        class="mem_call">
+                                    <input type="text" class="mem_area">-<input type="text" class="mem_call">
                                 </div>
                             </li>
                             <li>
@@ -157,7 +164,7 @@
                                 </div>
                                 <div class="mem_input">
                                     <input type="text" class="mem_phone mem_must" minlength="9">
-                                    <span  class="alertPhone imp_red d-block" style="font-size:.8em;"></span>
+                                    <span class="mem_alert imp_red d-block" style="font-size:.8em;"></span>
                                 </div>
                             </li>
                             <li>
@@ -197,73 +204,105 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script>
+
+
+        let memName = document.querySelector('.mem_name');
+        let memEmail = document.querySelector('.mem_email');
         let memPassword = document.querySelector('.mem_password');
         let memCheckPassword = document.querySelector('.mem_checkPassword');
-        function checkPassword() {
-            let alertPassword = document.querySelector('.alertPassword');
-            if (memPassword.value == memCheckPassword.value) {
-                alertPassword.innerHTML = '';
-                memPassword.classList.remove('inputRed');
-                memCheckPassword.classList.remove('inputRed');
-            } else {
-                alertPassword.innerHTML = '與密碼不一致';
-                memPassword.classList.add('inputRed');
-                memCheckPassword.classList.add('inputRed');
-            }
-        };
-        memPassword.addEventListener('keyup', checkPassword);
-        memCheckPassword.addEventListener('keyup', checkPassword);
-
-
-        let memEmail = document.querySelector('.mem_email');
-        function iEmail() {
-            let alertEmail = document.querySelector('.alertEmail');
-            if (memEmail.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) {
-                alertEmail.innerHTML = '';
-                memEmail.classList.remove('inputRed');
-            } else {
-                alertEmail.innerHTML = 'E-mail格式不符';
-                memEmail.classList.add('inputRed');
-            };
-        };
-        memEmail.addEventListener('keyup', iEmail);
-
         let memPhone = document.querySelector('.mem_phone');
-        function checkPhone(){
-            let alertPhone = document.querySelector('.alertPhone');
-            if(memPhone.value[0] == 0 && memPhone.value[1] == 9 && memPhone.value.length >= 9){
-                alertPhone.textContent = '';
-                memPhone.classList.remove('inputRed');
-            } else {
-                alertPhone.textContent = '手機格式不符';
-                memPhone.classList.add('inputRed');
-            }
-        }
-        memPhone.addEventListener('keyup', checkPhone);
-
-
+        let memAlert = document.querySelectorAll('.mem_alert');
+        let emailFormat = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
         let memMusts = document.querySelectorAll('.mem_must');
         let memBtn = document.querySelector('.mem_btn a');
+        memBtn.addEventListener('click', vaildation);
+        memName.addEventListener('keyup', vaildationName);
+        memEmail.addEventListener('keyup', vaildationEmail);
+        memPassword.addEventListener('keyup', vaildationPassword);
+        memCheckPassword.addEventListener('keyup', vaildationCheckPassword);
+        memPhone.addEventListener('keyup', vaildationPhone);
 
-        for (let i = 0; i < memMusts.length; i++) {
-            function inputBorderRed() {
-                if (memMusts[i].value !== "") {
-                    memMusts[i].classList.remove('inputNone');
-                } else {
-                    memMusts[i].classList.add('inputNone');
-                }
+
+        function vaildationName() {
+            if (memName.value.length < 1) {
+                memAlert[0].textContent = '請輸入姓名';
+                memName.classList.add('inputRed');
+                return false;
             }
-            memMusts[i].addEventListener('blur', inputBorderRed);
+            else {
+                memAlert[0].textContent = '';
+                memName.classList.remove('inputRed');
+                return true;
+            }
         }
 
-        memBtn.addEventListener('click', function (e) {
-            if (memEmail.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1 && memPassword.value == memCheckPassword.value && memMusts[0].value !== '' && memMusts[1].value !== '' && memMusts[2].value !== '' && memMust[3].value !== '' && memMusts[4].value !== '') {
-               
+        function vaildationEmail() {
+            if (memEmail.value.search(emailFormat) == -1) {
+                memAlert[1].textContent = '信箱格是不正確';
+                memEmail.classList.add('inputRed');
+                return false;
+            }
+            else {
+                memAlert[1].textContent = '';
+                memEmail.classList.remove('inputRed');
+                return true;
+            }
+        }
+
+        function vaildationPassword(){
+            if (memPassword.value.length < 8 || memPassword.value.search(/^[a-zA-Z]+[0-9]+$/) == -1) {
+                memAlert[2].textContent = '請輸入8~16個中英混合的密碼';
+                memPassword.classList.add('inputRed');
+                return false;
+            }
+            else {
+                memAlert[2].textContent = '';
+                memPassword.classList.remove('inputRed');
+                return true;
+            }
+        }
+
+        function vaildationCheckPassword () {
+            if (memCheckPassword.value !== memPassword.value) {
+                memAlert[3].textContent = '與密碼不一致';
+                memCheckPassword.classList.add('inputRed');
+                return false;
+            }
+            else {
+                memAlert[3].textContent = '';
+                memCheckPassword.classList.remove('inputRed');
+                return true;
+            }
+        }
+
+        function vaildationPhone() {
+            if (memPhone.value[0] != 0 || memPhone.value[1] != 9 || memPhone.value.length < 10 || memPhone.value.search(/^[0-9]+$/) == -1) {
+                memAlert[4].textContent = '手機格是不正確';
+                memPhone.classList.add('inputRed');
+                return false;
+            }
+            else {
+                memAlert[4].textContent = '';
+                memPhone.classList.remove('inputRed');
+                return true;
+            }
+        }
+
+        function vaildation() {
+
+            vaildationName();
+            vaildationEmail();
+            vaildationPassword();
+            vaildationCheckPassword();
+            vaildationPhone();
+
+            if (vaildationName() && vaildationEmail() && vaildationPassword() && vaildationCheckPassword() && vaildationPhone()){
+                alert('done')
             } else {
-                 e.preventDefault();
+                return false;
             }
 
-        })
+        }
 
 
 
