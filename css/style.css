@@ -781,9 +781,10 @@ body{
 
 .cart .cart-list .cart_img{
     display: inline-block;
+    width: 120px;
+    
 }
 .cart .cart-list .cart_img img{
-    max-width: 120px;
     height: 60px;
     margin-right: 15px;
     display: inline-block;
@@ -1311,16 +1312,19 @@ body{
 
 
 /* --------------------------- */
-.subpage{
+.subpage,.paginationjs-pages{
+    display: flex;
     margin-top: 20px;
+    justify-content: flex-end;
     align-items: center;
     -webkit-align-items: center;
 }
-.subpage > ul {
+.subpage > ul ,.paginationjs-pages > ul{
+    display: flex;
     justify-content: flex-end;
     -webkit-justify-content: flex-end;
 }
-.subpage > ul > li{
+.subpage > ul > li, .paginationjs-pages > ul > li{
     display: flex;
     justify-content: center;
     -webkit-justify-content: center;
@@ -1329,12 +1333,13 @@ body{
     border: 1px solid #009797;
 }
 
-.subpage > ul > li a:hover, .subpage > ul > .active a{
+.subpage > ul > li a:hover, .subpage > ul > .active a,.paginationjs-pages > ul > .disabled a:hover,.paginationjs-pages > ul > li a:hover, .paginationjs-pages > ul > .active a, .paginationjs-pages > ul > .active a:hover{
     background-color: #009797;
     color: #fff;
+    cursor: pointer;
 }
 
-.subpage > ul > li a{
+.subpage > ul > li a, .paginationjs-pages > ul > li a{
     text-decoration: none;
     display: block;
     padding: .5em .75em;
@@ -1342,11 +1347,21 @@ body{
     font-size: 1em;
 }
 
-.subpage > ul > .prev{
+.subpage > ul > .prev, .paginationjs-prev{
     border-radius: 5px 0 0 5px;
 }
-.subpage > ul > .next{
+.subpage > ul > .next, .paginationjs-next{
     border-radius: 0 5px 5px 0;
+}
+
+.paginationjs-pages > ul > li a span{
+    color: #009797;
+}
+.paginationjs-pages > ul > li > a:hover span{
+    color: #Fff!important;
+}
+.cart-page > .cart-list{
+    display: none;
 }
 
 

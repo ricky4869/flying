@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/pagination.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <title>台南府城漫步</title>
@@ -98,395 +99,417 @@
                                 <div class="cart-item col-2">金額</div>
                             </div>
                         </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                        <div class="cart-page" id="cart-page">
+                            <div class="cart-container">
+                            </div>
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/bg2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/bg2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/bg2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/bg2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/bg2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/bg2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/bg2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/bg2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/bg2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/bg2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/tnn2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/tnn2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/tnn2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/tnn2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/tnn2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/tnn2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/tnn2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/tnn2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart-list">
-                            <div class="row">
-                                <div class=" cart-item col-lg-6 d-flex name">
-                                    <div class="cart_img">
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/tnn2.jpg" alt="">
+                                            </a>
+                                        </div>
                                         <a href="product.html">
-                                            <img src="img/tnn2.jpg" alt="">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
                                         </a>
                                     </div>
-                                    <a href="product.html">
-                                        <h3>【台南一日遊】深度台南包車一日遊</h3>
-                                    </a>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
                                 </div>
-                                <div class=" cart-item col-lg-2 date">
-                                    <span>2019/07/28</span>
-                                </div>
-                                <div class=" cart-item col-lg-2 quantity">
-                                    <span>
-                                        <i class="reduce">-</i>
-                                        <input type="text" value="1" readonly="readonly">
-                                        <i class="add">+</i>
-                                    </span>
-                                </div>
-                                <div class=" cart-item col-lg-2 price">
-                                    TWD <span class="value">3800</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cart-item col-6 remove">
-                                    <a href="#">移除</a>
-                                </div>
-                                <div class="cart-item col-6 subtotal">
-                                    TWD <span class="value">0</span>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="total_bar">
-                            <div class="total_item">
-                                <h4>訂單明細</h4>
-                            </div>
-                            <div class="total_item">
-                                <p>總金額</p>
-                                <h3 class="total">TWD <span class="value">0</span></h3>
-                            </div>
-                            <div class="total_item">
-                                <div class="btn">
-                                    <a href="#">結帳</a>
+                            <div class="cart-list">
+                                <div class="row">
+                                    <div class=" cart-item col-lg-6 d-flex name">
+                                        <div class="cart_img">
+                                            <a href="product.html">
+                                                <img src="img/bg2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="product.html">
+                                            <h3>【台南一日遊】深度台南包車一日遊</h3>
+                                        </a>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 date">
+                                        <span>2019/07/28</span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 quantity">
+                                        <span>
+                                            <i class="reduce">-</i>
+                                            <input type="text" value="1" readonly="readonly">
+                                            <i class="add">+</i>
+                                        </span>
+                                    </div>
+                                    <div class=" cart-item col-lg-2 price">
+                                        TWD <span class="value">3800</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cart-item col-6 remove">
+                                        <a href="#">移除</a>
+                                    </div>
+                                    <div class="cart-item col-6 subtotal">
+                                        TWD <span class="value">0</span>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="subpage d-flex justify-content-end">
-                    <ul class="d-flex col-7 col-lg-9">
-                        <li class="prev">
-                            <a href="#" class="fas fa-angle-left" onclick="plusSubpage(-1)"> </a>
-                        </li>
-                        <li class="page_item" onclick="currentSubpage(1)">
-                            <a href="#">1</a>
-                        </li>
-                        <li class="page_item" onclick="currentSubpage(2)">
-                            <a href="#">2</a>
-                        </li>
-                        <li class="page_item" onclick="currentSubpage(3)">
-                            <a href="#">3</a>
-                        </li>
-                        <li class="next" onclick="plusSubpage(1)">
-                            <a href="#" class="fas fa-angle-right"></a>
-                        </li>
-                    </ul>
+                <div class="col-12">
+                    <div class="total_bar">
+                        <div class="total_item">
+                            <h4>訂單明細</h4>
+                        </div>
+                        <div class="total_item">
+                            <p>總金額</p>
+                            <h3 class="total">TWD <span class="value">0</span></h3>
+                        </div>
+                        <div class="total_item">
+                            <div class="btn">
+                                <a href="#">結帳</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
     <div class="footer">
@@ -497,6 +520,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/datepicker.min.js"></script>
+    <script src="js/pagination.min.js"></script>
     <script src="js/all.js"></script>
     <script src="js/navbar.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
@@ -507,38 +531,41 @@
 
     <script>
 
-        var subpageIndex = 1;
-        showSubpage(subpageIndex);
+        $(document).ready(function () {
 
-        function plusSubpage(n) {
-            showSubpage(subpageIndex += n);
-        }
+            let len = $('.cart-list').length
 
-        function currentSubpage(n) {
-            showSubpage(subpageIndex = n);
-        }
+            function simpleTemplating(data) {
+                var html = '<ul>';
+                $.each(data, function (index, item) {
 
-        function showSubpage(n) {
-            var i;
-            var pages = document.getElementsByClassName("page_item");
-            // cartLists = document.querySelectorAll('.cart-list');
-
-            // for (let a = 0; a < 5; a++) {
-            //     cartLists[a + (n-1)*5].style.display = 'block';
-            // }
-            if (n > pages.length) { subpageIndex = pages.length }
-            if (n < 1) { subpageIndex = 1 }
-
-            for (i = 0; i < pages.length; i++) {
-                pages[i].className = pages[i].className.replace(" active", "");
-            }
-
-            pages[subpageIndex - 1].className += " active";
+                    html += '<li>' + item + '</li>';
+                });
+                html += '</ul>';
 
 
-        };
+                return html;
+            };
+            $('#cart-page').pagination({
+                dataSource: function (done) {
+                    var result = [];
+                    for (var i = 0; i < len; i++) {
+                        result.push($('.cart-list')[i].outerHTML);
+                    }
+                    done(result);
+                },
+                pageSize: 5,
+                nextText:`<span class="fas fa-angle-right"></span>`,
+                prevText:`<span class="fas fa-angle-left"></span>`,
+                callback: function (data, pagination) {
+                    // template method of yourself
+                    var html = simpleTemplating(data);
+                    $('.cart-container').html(html);
+                }
+            })
 
 
+        });
 
 
         var lists = document.querySelectorAll('.cart-list');
@@ -584,6 +611,7 @@
         if (lists.length >= 1) {
             cart();
         }
+
     </script>
 </body>
 

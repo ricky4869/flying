@@ -23,13 +23,6 @@ $('.wrap').on('click', function (e) {
     })
 
 
-    $('[data-toggle="datepicker"]').datepicker({
-        language: 'zh-TW',
-        format: 'yyyy/mm/dd',
-        autoHide: true,
-
-    });
-
 
     $('.main-carousel').owlCarousel({
         loop: true,
@@ -67,5 +60,15 @@ $('.wrap').on('click', function (e) {
 
         }
     })
+
+    $('[data-toggle="datepicker"]').datepicker({
+        changeYear:true,
+        language: 'zh-TW',
+        format: 'yyyy/mm/dd',
+        autoHide: true
+
+    })
+
+
 
 })
